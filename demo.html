@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- display the user input on click event -->
+    <h2 id="display"></h2>
+    <input type="text" placeholder="enter your name" id="myName" >
+    <button onclick="show()">Show Name</button>
+
+    <!-- change color ondblclick of heading -->
+     <h2 id="text" onmouseover="mouseover" >Java Script</h2>
+     <button ondblclick="colorChange()">Change Color</button>
+<script src="dom.js"/>
+
+</body>
+</html>
