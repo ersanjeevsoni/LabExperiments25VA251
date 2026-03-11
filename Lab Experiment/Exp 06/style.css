@@ -1,0 +1,139 @@
+body {
+    background: rgb(150, 150, 180);
+    min-height: 100vh;
+    transition: background 0.5s ease;
+    cursor: default;
+}
+
+/* ── GRID LAYOUT ───────────────────────────────────────── */
+.shell {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+/* ── TOPBAR ─────────────────────────────────────────────── */
+.topbar {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.topbar-logo {
+
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  
+}
+
+.topbar-sub {
+  
+    font-size: 11px;
+   
+    letter-spacing: 1px;
+}
+
+/* ── EVENT LOG TICKER ───────────────────────────────────── */
+.ticker-bar {
+    grid-column: 1 / -1;
+    background: rgb(186, 201, 186);
+    color: #0d0d0d;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 36px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.ticker-label {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.ticker-text {
+    white-space: nowrap;
+    flex: 1;
+}
+
+/* ── STAGE (left) ───────────────────────────────────────── */
+.stage {
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: background 0.6s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/* Buttons grid */
+.btn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-grid.single {
+    grid-template-columns: 1fr;
+}
+
+
+
+
+/* Reset button */
+.btn-reset {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* Event log */
+.log-box {
+    background: burlywood;
+   
+    border-radius: 10px;
+    padding: 14px;
+    height: 140px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.log-line {
+
+    font-size: 11px;
+    padding: 3px 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: 8px;
+    animation: logIn .2s ease;
+}

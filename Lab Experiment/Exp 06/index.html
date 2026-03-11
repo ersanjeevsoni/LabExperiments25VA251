@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+    
+
+<div class="shell">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-logo">DOM EVENTS</div>
+    <div class="topbar-sub">// JavaScript DOM Manipulation &amp; Event Handling</div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-bar">
+    <span class="ticker-label">LAST EVENT →</span>
+    <span class="ticker-text" id="tickerText">Waiting for interaction…</span>
+  </div>
+
+  <!-- ── STAGE ── -->
+  <main class="stage" id="stage">
+    <div>
+      <h1 id="mainHeading">CHANGE ME</h1>
+
+      <p id="mainPara">
+        This paragraph reacts to your controls. Try changing the font size using the slider,
+        or hide and reveal this text with the toggle button. Every interaction is handled by a
+        JavaScript event listener — no page reloads, pure DOM manipulation.
+      </p>
+
+      <div class="status-row">
+        <span class="badge" id="badgeHeading">
+          <span class="dot"></span> heading
+        </span>
+        <span class="badge" id="badgeBg">
+          <span class="dot"></span> background
+        </span>
+        <span class="badge" id="badgeFont">
+          <span class="dot"></span> font size
+        </span>
+        <span class="badge" id="badgePara">
+          <span class="dot"></span> paragraph
+        </span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── CONTROLS ── -->
+  <aside class="controls">
+
+    <!-- INPUT -->
+    <section>
+      <div class="ctrl-section-title">01 · Message Input</div>
+      <div class="input-wrap">
+        <span class="input-icon">✏️</span>
+        <input type="text" id="msgInput" maxlength="40"
+               placeholder="Type a new heading…"/>
+      </div>
+      <div class="char-counter" id="charCounter">0 / 40</div>
+    </section>
+
+    <!-- HEADING BUTTON -->
+    <section>
+      <div class="ctrl-section-title">02 · Heading</div>
+      <div class="btn-grid single">
+        <button class="ctrl-btn glow-hover" id="btnHeading">
+          <span class="btn-icon">🔤</span>
+          <span class="btn-label">Change Heading Text</span>
+          <span class="btn-key">click</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- BACKGROUND COLORS -->
+    <section>
+      <div class="ctrl-section-title">03 · Background Color</div>
+      <div class="color-grid" id="colorGrid">
+        <button class="swatch-btn active" style="background:#0d0d0d" data-color="#0d0d0d" data-name="Void"></button>
+        <button class="swatch-btn" style="background:#1a1035" data-color="#1a1035" data-name="Deep"></button>
+        <button class="swatch-btn" style="background:#0f2518" data-color="#0f2518" data-name="Forest"></button>
+        <button class="swatch-btn" style="background:#2a0a0a" data-color="#2a0a0a" data-name="Ember"></button>
+        <button class="swatch-btn" style="background:#001428" data-color="#001428" data-name="Ocean"></button>
+        <button class="swatch-btn" style="background:#1a1200" data-color="#1a1200" data-name="Gold"></button>
+        <button class="swatch-btn" style="background:#1a0a2e" data-color="#1a0a2e" data-name="Dusk"></button>
+        <button class="swatch-btn" style="background:#0a1a1a" data-color="#0a1a1a" data-name="Teal"></button>
+      </div>
+    </section>
+
+    <!-- FONT SIZE -->
+    <section>
+      <div class="ctrl-section-title">04 · Font Size</div>
+      <div class="slider-wrap">
+        <span style="font-size:11px;color:var(--muted)">S</span>
+        <input type="range" id="fontSlider" min="12" max="22" value="15" step="1"/>
+        <span style="font-size:15px;color:var(--muted)">L</span>
+        <span class="slider-val" id="sliderVal">15px</span>
+      </div>
+    </section>
+
+    <!-- SHOW/HIDE + RESET -->
+    <section>
+      <div class="ctrl-section-title">05 · Paragraph &amp; Reset</div>
+      <div class="btn-grid">
+        <button class="ctrl-btn glow-hover" id="btnToggle">
+          <span class="btn-icon">👁️</span>
+          <span class="btn-label">Hide Paragraph</span>
+          <span class="btn-key">click</span>
+        </button>
+        <button class="ctrl-btn glow-hover" id="btnReset" style="--accent:var(--accent2);">
+          <span class="btn-icon">↺</span>
+          <span class="btn-label">Reset Page</span>
+          <span class="btn-key">click</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- EVENT LOG -->
+    <section>
+      <div class="ctrl-section-title">06 · Event Log</div>
+      <div class="log-box" id="logBox">
+        <div class="log-line">
+          <span class="log-time">00:00:00</span>
+          <span class="log-event">init</span>
+          <span class="log-detail">Page loaded — awaiting events</span>
+        </div>
+      </div>
+    </section>
+
+  </aside>
+</div>
+    <script src="./script.js"></script>
+</body>
+</html>
